@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+	int A,DA,B,DB,PA,PB,i,n,k;
+	PA=PB=n=k=0;
+	scanf("%d%d%d%d",&A,&DA,&B,&DB);
+	while(A!=0){
+		if(A%10==DA)
+		k++;
+		A=A/10;
+	}
+	while(k!=0){
+		PA=PA*10+DA;
+		k--;
+	}
+	while(B!=0){
+		if(B%10==DB)
+		n++;
+		B=B/10;
+	}
+	while(n!=0)
+	{
+		PB=PB*10+DB;
+		n--;
+	}
+	printf("%d",PA+PB);
+}
